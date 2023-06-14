@@ -37,10 +37,7 @@ async def validate_configuration_2(file : UploadFile=File(...)):
     db.commit()
     db.close()
     return {'status':0,'error':validation}
-@app.post('/get_Configuration')
-# code yet to update
-async def get_configuration(file : UploadFile=File(...)):
-    pass
+
 @app.get('/get_Logs')
 async def get_logs():
     db = duckdb.connect(db_file_name)
